@@ -48,7 +48,7 @@ public class NestedCheckedException extends Exception implements HasRootCause {
         }
     }
 
-    
+
     public Throwable getRootCause() {
         return rootCause;
     }
