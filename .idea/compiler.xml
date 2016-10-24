@@ -22,11 +22,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="summer-beans" />
         <module name="summer-core" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="summer" target="1.5" />
+      <module name="summer-beans" target="1.5" />
       <module name="summer-core" target="1.5" />
     </bytecodeTargetLevel>
   </component>
