@@ -24,12 +24,14 @@
         <processorPath useClasspath="true" />
         <module name="summer-beans" />
         <module name="summer-core" />
+        <module name="summer-util" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="summer" target="1.5" />
       <module name="summer-beans" target="1.5" />
       <module name="summer-core" target="1.5" />
+      <module name="summer-util" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
