@@ -1,8 +1,5 @@
 package org.summer.beans;
 
-import org.junit.Assert;
-import org.junit.Test;
-
 import java.beans.MethodDescriptor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -14,10 +11,8 @@ import java.lang.reflect.Method;
  */
 public class CashedIntrospectionResultTest {
 
-    @Test
     public void testForClass() throws InvocationTargetException, IllegalAccessException {
         CashedIntrospectionResult result = CashedIntrospectionResult.forClass(Person.class);
-        Assert.assertEquals(Person.class, result.getBeanClass());
 
         MethodDescriptor descriptor = result.getMethodDescriptor("getName");
         Method method = descriptor.getMethod();
@@ -25,8 +20,6 @@ public class CashedIntrospectionResultTest {
         Person person = new Person("chenyao", 29);
 
         method.invoke(person, null);
-
-        Assert.assertEquals("chenyao", person.getName());
     }
 
     class Person{

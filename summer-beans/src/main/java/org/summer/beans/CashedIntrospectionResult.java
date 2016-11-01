@@ -50,7 +50,7 @@ final class CashedIntrospectionResult {
         }
     }
 
-    public static CashedIntrospectionResult forClass(Class clazz) {
+    public static CashedIntrospectionResult forClass(Class clazz) throws BeansException {
         Object o = $cache.get(clazz);
 
         if (o == null) {
