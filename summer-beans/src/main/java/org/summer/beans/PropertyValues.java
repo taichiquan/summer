@@ -11,7 +11,7 @@ public interface PropertyValues {
 
     boolean contains(String name);
 
-    PropertyValue getPropertyValue();
+    PropertyValue getPropertyValue(String name);
 
     PropertyValues changeSince(PropertyValues old);
 }

@@ -14,7 +14,7 @@ public class ClassEditor extends PropertyEditorSupport {
         Class clazz = null;
 
         try {
-            clazz.forName(text);
+            clazz = Class.forName(text);
         } catch (ClassNotFoundException e) {
             throw new IllegalArgumentException("Invalid class name [" + text + "]: " + e.getMessage());
         }

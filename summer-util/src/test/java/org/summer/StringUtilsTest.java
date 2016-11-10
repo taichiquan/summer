@@ -18,4 +18,11 @@ public class StringUtilsTest {
 
         Assert.assertEquals("","abcde",as[0]);
     }
+
+
+    @Test
+    public void testArrayToDelimitedString() {
+        String[] arrays = {"adb","edf", "xxx"};
+        Assert.assertEquals("adb-edf-xxx",StringUtils.arrayToDelimitedString(arrays, "-"));
+    }
 }

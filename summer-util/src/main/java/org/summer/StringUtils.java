@@ -41,4 +41,20 @@ public abstract class StringUtils {
 
     }
 
+
+    public static String arrayToDelimitedString(Object[] arrays, String delimited) {
+        if (arrays == null) {
+            return "null";
+        }
+
+        StringBuffer sb = new StringBuffer();
+        for(int i = 0; i < arrays.length; i++) {
+            if (i > 0) {
+                sb.append(delimited);
+            }
+            sb.append(arrays[i]);
+        }
+
+        return sb.toString();
+    }
 }
