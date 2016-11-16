@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/summer.iml" filepath="$PROJECT_DIR$/summer.iml" />
       <module fileurl="file://$PROJECT_DIR$/summer-beans/summer-beans.iml" filepath="$PROJECT_DIR$/summer-beans/summer-beans.iml" />
+      <module fileurl="file://$PROJECT_DIR$/summer-common-io/summer-common-io.iml" filepath="$PROJECT_DIR$/summer-common-io/summer-common-io.iml" />
       <module fileurl="file://$PROJECT_DIR$/summer-core/summer-core.iml" filepath="$PROJECT_DIR$/summer-core/summer-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/summer-util/summer-util.iml" filepath="$PROJECT_DIR$/summer-util/summer-util.iml" />
     </modules>

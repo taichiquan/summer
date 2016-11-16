@@ -2,28 +2,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>summer</artifactId>
+        <groupId>org.summer</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.summer</groupId>
-    <artifactId>summer</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>summer-core</module>
-        <module>summer-beans</module>
-        <module>summer-util</module>
-        <module>summer-common-io</module>
-    </modules>
-
-    <dependencyManagement>
-        <dependencies>
+    <artifactId>summer-common-io</artifactId>
+    <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
-        </dependencies>
-    </dependencyManagement>
+    </dependencies>
+
+
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+    </dependency>
 
 </project>

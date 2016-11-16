@@ -71,7 +71,8 @@ public class MutablePropertyValues implements PropertyValues {
         if (this == old) {
             return change;
         }
-        
+
+
         return null;
     }
 }

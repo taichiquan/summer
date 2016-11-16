@@ -23,6 +23,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="summer-beans" />
+        <module name="summer-common-io" />
         <module name="summer-core" />
         <module name="summer-util" />
       </profile>
@@ -30,6 +31,7 @@
     <bytecodeTargetLevel>
       <module name="summer" target="1.5" />
       <module name="summer-beans" target="1.5" />
+      <module name="summer-common-io" target="1.5" />
       <module name="summer-core" target="1.5" />
       <module name="summer-util" target="1.5" />
     </bytecodeTargetLevel>
