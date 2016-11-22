@@ -1,8 +1,11 @@
 package org.summer.common.io.tools;
 
+import org.junit.Assert;
+import org.summer.common.io.FileUtils;
 import org.summer.common.io.IOUtils;
 
 import java.io.*;
+import java.util.Arrays;
 
 /**
  * Created by Administrator on 2016/11/16 0016.
@@ -61,7 +64,49 @@ public abstract class TestUtils {
     }
 
 
-    public static void newFile(final File testDirectory, final String name) {
+    public static File newFile(final File testDirectory, final String name) throws IOException {
+        final File file = new File(testDirectory, name);
+        if (file.exists()) {
+            FileUtils.forceDelete(file);
+        }
+        return file;
+    }
+
+
+    public static void checkFile(final File file) {
+        Assert.assertTrue(file.exists());
 
     }
+
+
+    private static void assertEqualsContent(final File f0, final File f1) {
+        try{
+            final InputStream is0 = new FileInputStream(f0);
+            final InputStream is1 = new FileInputStream(f1);
+
+            final byte[] buf0 = new byte[1024];
+            final byte[] buf1 = new byte[1024];
+
+            int n0 = 0,n1;
+            while (-1 != n0) {
+                try {
+                    n0 = is0.read(buf0);
+                    n1 = is1.read(buf1);
+
+                    Assert.assertTrue(n0 == n1);
+                    Assert.assertTrue(Arrays.equals(buf0, buf1));
+
+                } catch (IOException e) {
+
+                }finally {
+                    IOUtils.closeQuietly(is0);
+                    IOUtils.closeQuietly(is1);
+                }
+            }
+
+        }catch (FileNotFoundException e) {
+
+        }
+    }
+
 }

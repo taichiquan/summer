@@ -24,6 +24,9 @@ public abstract class IOUtils {
         closeQuietly(writer);
     }
 
+    public static void closeQuietly(final InputStream inputStream) {
+        closeQuietly(inputStream);
+    }
 
     public static void closeQuietly(final OutputStream outputStream) {
         closeQuietly(outputStream);

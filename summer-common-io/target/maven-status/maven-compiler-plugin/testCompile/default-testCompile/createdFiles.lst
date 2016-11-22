@@ -1,0 +1,4 @@
+org\summer\common\io\tools\FileBasedTestCase.class
+org\summer\common\io\output\StringBuilderWriterTest.class
+org\summer\common\io\tools\TestUtils.class
+org\summer\common\io\comparator\ComparatorAbstractTestCase.class

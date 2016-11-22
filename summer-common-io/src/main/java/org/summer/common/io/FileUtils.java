@@ -1,6 +1,6 @@
 package org.summer.common.io;
 
-import java.io.File;
+import java.io.*;
 
 /**
  * Created by Administrator on 2016/11/14 0014.
@@ -21,5 +21,28 @@ public abstract class FileUtils {
         }
 
         return file;
+    }
+
+
+
+    public static void forceDelete(final File file) throws IOException {
+        if (file.isDirectory()) {
+            // delete directory
+        }else{
+
+            if (!file.exists()) {
+                throw new FileNotFoundException("File does not exist: " + file);
+            }
+
+            if (!file.delete()) {
+                final String message =
+                        "Unable to delete file: " + file;
+                throw new IOException(message);
+            }
+        }
+    }
+
+    public static void deleteDirectory(final File directory) {
+
     }
 }

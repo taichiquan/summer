@@ -1,0 +1,5 @@
+org\summer\common\io\comparator\AbstractFileComparator.class
+org\summer\common\io\Java7Support.class
+org\summer\common\io\IOUtils.class
+org\summer\common\io\FileUtils.class
+org\summer\common\io\output\StringBuilderWriter.class
