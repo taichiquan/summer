@@ -32,7 +32,7 @@ public class CompositerFileCompator extends AbstractFileComparator implements Se
         for (Comparator<File> comparator : iterable) {
             comparatorList.add(comparator);
         }
-        this.delegates = (Comparator<File>[]) comparatorList.toArray(new Comparator<?>[comparatorList.size()]);
+        this.delegates = (Comparator<   File>[]) comparatorList.toArray(new Comparator<?>[comparatorList.size()]);
     }
 
 

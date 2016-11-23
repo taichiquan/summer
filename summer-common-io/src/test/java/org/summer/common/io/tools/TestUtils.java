@@ -109,4 +109,13 @@ public abstract class TestUtils {
         }
     }
 
+    public static void sleep(long ms) throws InterruptedException {
+        long finishAt = System.currentTimeMillis() + ms;
+        long remaining = ms;
+        do {
+            Thread.sleep(remaining);
+            remaining = finishAt - System.currentTimeMillis();
+        } while (remaining > 0);
+    }
+
 }

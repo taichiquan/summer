@@ -21,15 +21,15 @@ public abstract class IOUtils {
 
 
     public static void closeQuietly(final Writer writer) {
-        closeQuietly(writer);
+        closeQuietly((Closeable)writer);
     }
 
     public static void closeQuietly(final InputStream inputStream) {
-        closeQuietly(inputStream);
+        closeQuietly((Closeable) inputStream);
     }
 
     public static void closeQuietly(final OutputStream outputStream) {
-        closeQuietly(outputStream);
+        closeQuietly((Closeable) outputStream);
     }
 
 
